@@ -8,23 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var labelScore: UILabel!
-    @IBOutlet weak var buttonScore: UIButton!
     
-    var count = 0
+    private var count = 0
     
-    @IBAction func buttonAction(_ sender: Any) {
+    @IBOutlet private weak var scoreLabel: UILabel!
+    @IBOutlet private weak var buttonScore: UIButton!
+    
+    @IBAction private func plusButtonTapped(_ sender: Any) {
         count = count + 1
-        labelScore.text = "\(count)"
+        scoreLabel.text = "\(count)"
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        }
-        // Do any additional setup after loading the view.
-    }
+}
 
 
 
